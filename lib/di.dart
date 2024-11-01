@@ -146,15 +146,15 @@ Future<void> _registerSingletons() async {
   final SharedPreferences preferences = await SharedPreferences.getInstance();
   BaseOptions options = BaseOptions(
     validateStatus: (status) {
-      if (status == null) {
-        return false;
-      }
-      if (status == 422 || status == 302) {
-        return true;
-      } else {
-        return status >= 200 && status < 300;
-      }
-      // return status != null && status < 500;
+      // if (status == null) {
+      //   return false;
+      // }
+      // if (status == 422 || status == 302) {
+      //   return true;
+      // } else {
+      //   return status >= 200 && status < 300;
+      // }
+      return status != null && status < 500;
     },
     baseUrl: EndPoints.baseUrl,
     followRedirects: false,
@@ -166,7 +166,7 @@ Future<void> _registerSingletons() async {
   );
   getIt.registerSingleton<BaseDio>(
       DioClient(options: options, dio: Dio(), interceptors: [
-    DioInterceptor(getIt()),
+    DioInterceptor(),
   ]));
   getIt.registerSingleton<SharedPreferences>(preferences);
 }

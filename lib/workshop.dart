@@ -53,9 +53,10 @@ class WorkshopManager extends StatelessWidget {
             );
           } else {
             return const SizedBox(
-                child: Center(
-              child: CustomLoaderWidget(),
-            ));
+              child: Center(
+                child: CustomLoaderWidget(),
+              ),
+            );
           }
         },
       ),

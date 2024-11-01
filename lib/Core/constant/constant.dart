@@ -1,8 +1,11 @@
+import 'package:flutter/material.dart';
+
 String image =
     "https://th.bing.com/th/id/OIP.-7H_BmzNXiraSflf1Qd6_gHaEK?rs=1&pid=ImgDetMain";
 
 String? deviceToken;
 
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
     /*
 web       1:305318370335:web:1c3dbaee4320830d3c092a

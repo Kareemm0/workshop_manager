@@ -23,10 +23,9 @@ class _SplashScreenState extends State<SplashScreen> {
       Future.delayed(const Duration(seconds: 8), () async {
         if (mounted) {
           if (token == null) {
-            // await SharedPref().removeToken();
             context.push(Routes.login);
           } else {
-            context.push(Routes.login);
+            context.push(Routes.navbar);
           }
         }
       });

@@ -1,17 +1,14 @@
 import 'dart:developer';
 
 import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../app/routes.dart';
 import '../../constant/app_shared_pref_keys.dart';
+import '../../constant/constant.dart';
 import '../../service/shared_pref.dart';
 
 class DioInterceptor implements Interceptor {
-  final GlobalKey<NavigatorState> navigatorKey;
-
-  DioInterceptor(this.navigatorKey);
+  DioInterceptor();
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
     log("=======================================");

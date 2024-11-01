@@ -29,8 +29,10 @@ import 'package:workshop_manager/Feature/workshop_working_time/presentation/view
 
 import '../../Feature/EditWorkshopProfile/presentation/views/edit_workshop_profile_screen.dart';
 import '../../Feature/IntroScreen/presentation/views/intro_screen.dart';
+import '../constant/constant.dart';
 
 final GoRouter router = GoRouter(
+  navigatorKey: navigatorKey,
   routes: [
     GoRoute(
       path: Routes.splash,
@@ -42,6 +44,7 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: Routes.login,
+      name: Routes.login,
       builder: (context, state) => const LoginScreen(),
     ),
     GoRoute(
